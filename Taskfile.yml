@@ -1,0 +1,7 @@
+version: "2.6"
+
+tasks:
+  protogen:
+    desc: "Генерация Go файлов из proto"
+    cmds:
+      - protoc --go_out=./internal/gen --go-grpc_out=./internal/gen ./proto/rates.proto

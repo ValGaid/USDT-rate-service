@@ -1,0 +1,19 @@
+syntax = "proto3";
+option go_package = "./rates";
+package rates;
+
+service rates {
+  rpc GetRates(Empty) returns (Response);
+}
+message Empty {}
+
+
+message Response {
+  int64  timestamp = 1;
+  string askPrice =2;
+  string bidPrice =3;
+}
+
+
+
+
